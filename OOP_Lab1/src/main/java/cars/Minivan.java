@@ -15,7 +15,6 @@ public class Minivan extends Car{
         this.capacity=capacity;
     }
 
-
     public int getCapacity() {
         return capacity;
     }

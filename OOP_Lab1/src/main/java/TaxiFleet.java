@@ -1,16 +1,21 @@
 import cars.Car;
+
 import java.util.List;
 import java.util.stream.Collectors;
+
 public class TaxiFleet {
 
     private List<Car> cars;
 
     public TaxiFleet( List<Car> cars) {
-
         this.cars = cars;
     }
 
     public int getTotalPrice() {
+        if (cars.isEmpty()) {
+            return 0;
+        }
+
         return cars
                 .stream()
                 .filter(Car.class::isInstance)

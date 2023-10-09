@@ -1,5 +1,7 @@
 package cars;
 
+import java.util.Objects;
+
 public abstract class Car {
 
     private String model;
@@ -11,10 +13,10 @@ public abstract class Car {
     private int maxSpeed;
 
     public Car(String model, int price, double fuelConsumption, int maxSpeed) {
-        if( model=="") {
+        if(Objects.equals(model, "")) {
             throw new IllegalArgumentException("Model should not be empty");
         }
-        if(price<=0) {
+        if(price <= 0) {
             throw new IllegalArgumentException("The price must be a positive number");
         }
         if(maxSpeed < 0) {
@@ -23,12 +25,13 @@ public abstract class Car {
         if(fuelConsumption < 0) {
             throw new IllegalArgumentException("Fuel consumption distance should not be negative");
         }
+
         this.model=model;
         this.price = price;
         this.maxSpeed = maxSpeed;
         this.fuelConsumption = fuelConsumption;
-
     }
+
     public int getPrice() {
         return this.price;
     }

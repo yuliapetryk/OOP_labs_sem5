@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         List<Car> cars = List.of(
                 new Minivan("Honda Odyssey", 13000, 20.7, 180, 8),
                 new SportsCar("Chevrolet Camaro ZL1", 46000, 50, 280, 300),

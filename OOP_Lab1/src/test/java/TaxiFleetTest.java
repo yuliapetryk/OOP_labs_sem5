@@ -2,6 +2,7 @@ import cars.Car;
 import cars.Minivan;
 import cars.SportUtilityVehicle;
 import cars.SportsCar;
+
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TaxiFleetTest {
 
-    @Test
+@Test
     public void testGetTotalPrice() {
         List<Car> cars = new ArrayList<>();
         cars.add(new Minivan("Model1", 10000, 10.0, 200,7));

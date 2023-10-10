@@ -18,4 +18,9 @@ public class SportsCar extends Car{
     public int getHorsepower() {
         return horsepower;
     }
+
+    @Override
+    public void getSpecialInfo(){
+        System.out.println("Horsepower: "+ this.horsepower);
+    }
 }

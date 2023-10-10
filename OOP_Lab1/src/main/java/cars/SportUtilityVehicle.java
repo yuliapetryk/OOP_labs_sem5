@@ -18,4 +18,9 @@ public class SportUtilityVehicle extends Car{
     public int getPassability() {
         return passability;
     }
+
+    @Override
+    public void getSpecialInfo(){
+        System.out.println("Passability: "+ this.passability);
+    }
 }

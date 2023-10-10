@@ -9,11 +9,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         List<Car> cars = List.of(
-                new Minivan("Honda Odyssey", 13000, 20, 180, 8),
+                new Minivan("Honda Odyssey", 13000, 20.7, 180, 8),
                 new SportsCar("Chevrolet Camaro ZL1", 46000, 50, 280, 300),
                 new SportUtilityVehicle("Mazda CX-5", 30000, 30, 180, 6),
                 new Minivan("Toyota Sienna", 15000, 22, 220, 6),
-                new SportsCar("Ford Mustang", 89000, 49, 300, 320),
+                new SportsCar("Ford Mustang", 89000, 49.4, 300, 320),
                 new SportsCar("Porsche 718 Boxster", 50000, 33, 270, 290),
                 new SportUtilityVehicle("Hyundai Tucson", 22000, 34, 180, 8)
         );

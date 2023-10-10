@@ -32,6 +32,9 @@ public abstract class Car {
         this.fuelConsumption = fuelConsumption;
     }
 
+
+    public abstract void getSpecialInfo();
+
     public int getPrice() {
         return this.price;
     }

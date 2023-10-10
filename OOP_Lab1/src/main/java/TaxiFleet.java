@@ -11,6 +11,10 @@ public class TaxiFleet {
         this.cars = cars;
     }
 
+    public void addCar(Car car) {
+        cars.add(car);
+    }
+
     public int getTotalPrice() {
         if (cars.isEmpty()) {
             return 0;

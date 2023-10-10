@@ -18,4 +18,9 @@ public class Minivan extends Car{
     public int getCapacity() {
         return capacity;
     }
+
+    @Override
+    public void getSpecialInfo(){
+        System.out.println("Capacity: "+ this.capacity);
+    }
 }

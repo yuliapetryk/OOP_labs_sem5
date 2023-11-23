@@ -1,13 +1,10 @@
 package data;
-
-import com.sun.jdi.Value;
-
 public class Gem {
     private String name;
     private int id;
     private String preciousness;
     private String origin;
-    private VisualParameters visualParameters;
+    private VisualParameters visualParameters = new VisualParameters();
     private double value;
 
     public Gem(){}

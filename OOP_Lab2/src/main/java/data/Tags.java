@@ -5,7 +5,7 @@ public class Tags {
     }
 
     public static final String DIAMONDFUND = "diamondFund";
-    public static final String GEM = "gem";
+    public static final String GEM = "Gem";
     public static final String NAME = "name";
     public static final String ID = "id";
     public static final String PRECIOUSNESS = "preciousness";

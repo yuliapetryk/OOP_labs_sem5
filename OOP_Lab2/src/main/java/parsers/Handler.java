@@ -1,6 +1,7 @@
 package parsers;
 
 import data.Gem;
+import data.Tags;
 import data.VisualParameters;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -8,6 +9,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 public class Handler extends DefaultHandler {
@@ -15,11 +17,16 @@ public class Handler extends DefaultHandler {
     private Gem currentGem;
     private VisualParameters currentVisualParameters;
     private StringBuilder currentText;
-    private List<Gem> gemList = new ArrayList<>();
+    private static List<Gem> gemList = new ArrayList<>();
 
-    public static List<Gem> getGemList(){
+    public static List<Gem> getGemList() {
         return gemList;
     }
+
+    public static String getRoot() {
+        return "Gem";
+    }
+
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         currentText = new StringBuilder();
@@ -42,6 +49,8 @@ public class Handler extends DefaultHandler {
 
         if ("name".equals(qName)) {
             currentGem.setName(text);
+        } else if ("id".equals(qName)) {
+            currentGem.setId(Integer.parseInt(text));
         } else if ("preciousness".equals(qName)) {
             currentGem.setPreciousness(text);
         } else if ("origin".equals(qName)) {
@@ -61,6 +70,43 @@ public class Handler extends DefaultHandler {
             System.out.println(currentGem);
         }
     }
+
+    public void setField(String name, String str) {
+        switch(name) {
+            case Tags.DIAMONDFUND :
+                Gem gem = new Gem();
+                gemList.add(gem);
+                break;
+            case Tags.NAME :
+                currentGem.setName(str);
+                break;
+            case Tags.ID :
+                currentGem.setId(Integer.valueOf(str));
+                break;
+            case Tags.ORIGIN :
+                currentGem.setOrigin(str);
+                break;
+            case Tags.PRECIOUSNESS:
+                currentGem.setPreciousness(str);
+                break;
+            case Tags.VALUE:
+                currentGem.setValue(Double.parseDouble(str));
+                break;
+            case Tags.COLOR:
+                currentGem.getVisualParameters().setColor(str);
+                break;
+            case Tags.TRANSPARENCY :
+                currentGem.getVisualParameters().setTransparency(Double.parseDouble(str));
+                break;
+            case Tags.NUMBER_OF_FACES:
+                currentGem.getVisualParameters().setNumberOfFaces(Integer.parseInt(str));
+                break;
+            case Tags.VISUAL_PARAMETERS :
+                VisualParameters visualParameters = new VisualParameters();
+                currentGem.setVisualParameters(visualParameters);
+                break;
+            }
+        }
 }
 
 

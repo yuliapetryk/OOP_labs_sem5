@@ -6,11 +6,7 @@ public class VisualParameters {
     private double transparency;
     private int numberOfFaces;
 
-    VisualParameters(String color,double transparency,int numberOfFaces  ){
-        this.color = color;
-        this.transparency = transparency;
-        this.numberOfFaces = numberOfFaces;
-    }
+    public VisualParameters(){}
 
     public String getColor() {
         return color;

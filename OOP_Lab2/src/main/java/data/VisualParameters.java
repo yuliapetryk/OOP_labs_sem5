@@ -8,6 +8,21 @@ public class VisualParameters {
 
     public VisualParameters(){}
 
+    public VisualParameters(String color, double transparency, int numberOfFaces ){
+        this.color = color;
+        this.transparency = transparency;
+        this.numberOfFaces = numberOfFaces;
+    }
+
+    @Override
+    public String toString() {
+        return "VisualParameters{" +
+                "color='" + color + '\'' +
+                ", transparency=" + transparency +
+                ", numberOfFaces=" + numberOfFaces +
+                '}';
+    }
+
     public String getColor() {
         return color;
     }

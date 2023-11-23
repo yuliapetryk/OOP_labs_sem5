@@ -10,6 +10,29 @@ public class Gem {
     private VisualParameters visualParameters;
     private double value;
 
+    public Gem(){}
+
+    public Gem (String name, int id, String preciousness, String origin, double value, VisualParameters visualParameters ){
+        this.id = id;
+        this.name = name;
+        this.preciousness = preciousness;
+        this.origin = origin;
+        this.value= value;
+        this.visualParameters = visualParameters;
+    }
+
+    @Override
+    public String toString() {
+        return "Gem{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", preciousness='" + preciousness + '\'' +
+                ", origin='" + origin + '\'' +
+                ", value=" + value +
+                 visualParameters.toString() +
+                '}';
+    }
+
     public String getName() {
         return name;
     }

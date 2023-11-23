@@ -72,6 +72,7 @@ public class Handler extends DefaultHandler {
     }
 
     public void setField(String name, String str) {
+        currentGem = new Gem();
         switch(name) {
             case Tags.DIAMONDFUND :
                 Gem gem = new Gem();

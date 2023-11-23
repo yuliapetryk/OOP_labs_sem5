@@ -10,16 +10,17 @@ import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import parsers.SAXParser;
+import parsers.SAXParsers;
 
 public class SAXParserTest {
 
-    private SAXParser parser;
+    private SAXParsers parser;
 
     @Test
     public void testRunSAXParser() throws SAXException, ParserConfigurationException, IOException {
 
         File file = new File("src/main/resources/gem.xml");
+
         List<Gem> expectedGemList = Arrays.asList(
                 new Gem("Diamond", 1, "precious", "South Africa", 3.0,
                         new VisualParameters("colorless", 0.9, 57)),
@@ -31,9 +32,8 @@ public class SAXParserTest {
                         new VisualParameters("red", 0.95, 50))
         );
 
-        parser= new SAXParser();
+        parser= new SAXParsers();
         List<Gem> actualGemList = parser.runSAXParser(file);
-
         Assertions.assertEquals(expectedGemList.toString(), actualGemList.toString());
     }
 }

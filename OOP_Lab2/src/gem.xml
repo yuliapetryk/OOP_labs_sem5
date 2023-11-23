@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondFund>
+    <Gem>
+        <name>Diamond</name>
+        <preciousness>precious</preciousness>
+        <origin>South Africa</origin>
+        <value>3</value>
+        <visualParameters>
+            <color>colorless</color>
+            <transparency>0.9</transparency>
+            <numberOfFaces>57</numberOfFaces>
+        </visualParameters>
+    </Gem>
+    <Gem>
+        <name>Amethyst</name>
+        <preciousness>semi-precious</preciousness>
+        <origin>Brazil</origin>
+        <value>8</value>
+        <visualParameters>
+            <color>purple</color>
+            <transparency>0.7</transparency>
+            <numberOfFaces>33</numberOfFaces>
+        </visualParameters>
+    </Gem>
+    <Gem>
+        <name>Citrine</name>
+        <preciousness>semi-precious</preciousness>
+        <origin>Brazil</origin>
+        <value>1.2</value>
+        <visualParameters>
+            <color>yellow</color>
+            <transparency>0.85</transparency>
+            <numberOfFaces>38</numberOfFaces>
+        </visualParameters>
+    </Gem>
+    <Gem>
+        <name>Ruby</name>
+        <preciousness>precious</preciousness>
+        <origin>Myanmar</origin>
+        <value>2.5</value>
+        <visualParameters>
+            <color>red</color>
+            <transparency>0.95</transparency>
+            <numberOfFaces>50</numberOfFaces>
+        </visualParameters>
+    </Gem>
+    
+</DiamondFund>

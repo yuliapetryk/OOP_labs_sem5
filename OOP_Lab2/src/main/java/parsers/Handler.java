@@ -17,7 +17,7 @@ public class Handler extends DefaultHandler {
     private Gem currentGem;
     private VisualParameters currentVisualParameters;
     private StringBuilder currentText;
-    private static List<Gem> gemList = new ArrayList<>();
+    private static final List<Gem> gemList = new ArrayList<>();
 
     public static List<Gem> getGemList() {
         return gemList;
@@ -35,6 +35,7 @@ public class Handler extends DefaultHandler {
             currentGem = new Gem();
         } else if ("visualParameters".equals(qName)) {
             currentVisualParameters = new VisualParameters();
+            currentGem.setVisualParameters(currentVisualParameters);
         }
     }
 
@@ -71,12 +72,12 @@ public class Handler extends DefaultHandler {
         }
     }
 
-    public void setField(String name, String str) {
-        currentGem = new Gem();
+    public void setField(String name, String str, Map<String, String> attributes) {
+
         switch(name) {
-            case Tags.DIAMONDFUND :
-                Gem gem = new Gem();
-                gemList.add(gem);
+            case Tags.GEM :
+                currentGem = new Gem();
+                gemList.add(currentGem);
                 break;
             case Tags.NAME :
                 currentGem.setName(str);

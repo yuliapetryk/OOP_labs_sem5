@@ -34,4 +34,8 @@ public class MyObject implements Serializable {
         this.number = number;
     }
 
+    @Override
+    public   String toString() {
+        return  getName()  + getMessage()  + getNumber();
+    }
 }

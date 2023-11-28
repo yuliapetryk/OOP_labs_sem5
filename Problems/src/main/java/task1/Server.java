@@ -24,7 +24,7 @@ public class Server {
         try {
             Object object = inputStream.readObject();
             MyObject myObject = (MyObject) object;
-            save(myObject);
+            save(myObject, fileName);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -36,7 +36,7 @@ public class Server {
                 myObject.getMessage()  + "' " + myObject.getNumber() + " times\n";
     }
 
-    public static synchronized void save(MyObject myObject) {
+    public static synchronized void save(MyObject myObject, String fileName) {
         String str = getInfo(myObject);
 
         try {
@@ -44,6 +44,11 @@ public class Server {
             if (!file.exists()) {
                 file.createNewFile();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try (FileWriter writer = new FileWriter(fileName, false)) {
         } catch (IOException e) {
             e.printStackTrace();
         }

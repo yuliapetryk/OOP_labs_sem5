@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_intro"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+    <ImageButton
+        android:layout_width="128dp"
+        android:layout_height="117dp"
+        android:background="@drawable/play_button"
+        android:contentDescription="Play Now"
+        android:onClick="play" />
+
+    <TextView
+        android:layout_width="215dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:onClick="play"
+        android:text="Play Now"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+    android:padding="16dp"
+    android:elevation="4dp"
+    android:radius="8dp"
+    android:stateListAnimator="@null"
+    />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+
+</LinearLayout>

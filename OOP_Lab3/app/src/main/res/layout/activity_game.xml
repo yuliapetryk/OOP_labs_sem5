@@ -11,69 +11,44 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:padding="6dp"
-        >
+        android:padding="6dp">
 
-        <SurfaceView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:id="@+id/surfaceView"
-            android:background="@android:color/transparent"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
-        <ImageButton
-            android:layout_width="120dp"
-            android:layout_height="70dp"
-            android:background="@drawable/button_border"
-            android:padding="5dp"
-            android:src="@drawable/arrow_up"
-            android:tag="top"
-            android:layout_gravity="center"
-            android:onClick="addStep" />
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/mazeWrapper"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <ImageButton
-                android:layout_width="120dp"
-                android:layout_height="70dp"
-                android:background="@drawable/button_border"
-                android:padding="5dp"
-                android:src="@drawable/arrow_left"
-                android:tag="left"
-                android:onClick="addStep"/>
-            <ImageButton
-                android:layout_marginStart="120dp"
-                android:layout_width="120dp"
-                android:layout_height="70dp"
-                android:background="@drawable/button_border"
-                android:padding="5dp"
-                android:src="@drawable/arrow_right"
-                android:tag="right"
-                android:onClick="addStep"/>
-        </LinearLayout>
-        <ImageButton
-            android:layout_width="120dp"
-            android:layout_height="70dp"
-            android:background="@drawable/button_border"
-            android:padding="5dp"
-            android:src="@drawable/arrow_down"
-            android:tag="bottom"
-            android:layout_gravity="center"
-            android:onClick="addStep"/>
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
 
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/arrow_up"
+                android:visibility="invisible" />
 
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/home"
+                android:rotation="315"
+                android:visibility="invisible" />
+
+        </FrameLayout>
     </LinearLayout>
 
+    <ImageButton
+        android:id="@+id/newMazeButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/restart"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:elevation="6dp"
+
+        android:clickable="true" />
 
 </LinearLayout>

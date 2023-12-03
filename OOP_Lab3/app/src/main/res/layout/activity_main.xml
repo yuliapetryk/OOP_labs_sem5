@@ -19,6 +19,7 @@
         android:layout_height="117dp"
         android:background="@drawable/play_button"
         android:contentDescription="Play Now"
+        android:id="@+id/btnSwitchPage"
         android:onClick="play" />
 
     <TextView
@@ -33,10 +34,11 @@
         android:textStyle="bold"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-    android:padding="16dp"
+        android:padding="16dp"
     android:elevation="4dp"
     android:radius="8dp"
     android:stateListAnimator="@null"
+
     />
 
     <View
